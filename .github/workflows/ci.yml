@@ -33,8 +33,8 @@ jobs:
         with:
           go-version: ${{ matrix.go-version }}
       - run: |
-          docker build -t psampaz/go-mod-outdated .
-          go list -u -m -json all | docker run --rm -i  psampaz/go-mod-outdated             
+          docker build -t benknigge/go-mod-outdated-library .
+          go list -u -m -json all | docker run --rm -i  benknigge/go-mod-outdated-library
   tests:
     strategy:
       matrix:
@@ -57,7 +57,7 @@ jobs:
           mkdir hugo 
           cp outdated/runner/testdata/hugo_0_53_go.mod hugo/go.mod
           cd hugo
-          go list -u -m -json all | $(go env GOPATH)/bin/go-mod-outdated    
+          go list -u -m -json all | $(go env GOPATH)/bin/go-mod-outdated-library
   coverage:
     strategy:
       matrix:
