@@ -6,6 +6,18 @@
 
 # go-mod-outdated
 
+************************************************************
+
+#### This fork of go-mod-outdated allows for the functionality provided to be used as a library in addition to a commandline utility
+
+#### The original without the ability to use as a library can be found here
+
+#### https://github.com/psampaz/go-mod-outdated
+
+All credit for this application should be given to https://github.com/psampaz
+
+**********************************************************
+
 An easy way to find outdated dependencies of your Go projects.
 
 go-mod-outdated provides a table view of the **go list -u -m -json all** command which lists all dependencies of a Go project and their available minor and patch updates. It also provides a way to filter indirect dependencies and dependencies without updates.
